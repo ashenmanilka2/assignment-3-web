@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDE Solutions - Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header id="cs-navigation">
+        <div class="cs-container">
+            <a href="" class="cs-logo" aria-label="back to home">
+             <img src="images/LOGO.png" alt="logo" aria-hidden="true" decoding="async">
+            </a>
+
+            <nav class="cs-nav" role="navigation">
+                <button class="cs-toggle" aria-label="mobile menu toggle">
+                    <div class="cs-box" aria-hidden="true">
+                        <span class="cs-line cs-line1" aria-hidden="true"></span>
+                        <span class="cs-line cs-line2" aria-hidden="true"></span>
+                        <span class="cs-line cs-line3" aria-hidden="true"></span>
+                    </div>
+                </button>
+                <div class="cs-ul-wrapper">
+                    <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
+                        <li class="cs-li"><a href="" class="cs-li-link">Home</a></li>
+                        <li class="cs-li"><a href="" class="cs-li-link">About</a></li>
+                        <li class="cs-li"><a href="" class="cs-li-link cs-active">Services</a></li>
+                        <li class="cs-li"><a href="" class="cs-li-link">Products</a></li>
+                        <li class="cs-li"><a href="" class="cs-li-link">Support/ Resources</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <a href="mailto:pdesolutions1@optusnet.com.au" class="cs-button-solid">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <section class="services">
+            <h2>Types of Services Offered include</h2>
+            <div class="cards">
+                <div class="card" id="card1">
+                    <div class="card-content">
+                        <ul>
+                            <li>Design and supply of Power & Distribution boards.</li>
+                            <li>Variable Speed Drives & Soft Starter applications.</li>
+                            <li>Harmonic Analysis</li>
+                            <li>HV Servicing and protection testing.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="card-content">
+                        <ul>
+                            <li>Power Factor Correction analysis.</li>
+                            <li>Power Factor correction equipment.</li>
+                            <li>Motor analysis via computer software on site.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card" id="card3">
+                    <div class="card-content">
+                        <ul>
+                            <li>Asbestos replacement parts for English Electric/GEC Boards and Fuse Switches.</li>
+                            <li>Total refurbishment of Superform CFS.</li>
+                            <li>Overhaul of ACB’s and Arc Chute replacements.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>PDE SOLUTIONS Pty Ltd<br>
+            621 Princes Highway<br>
+            Russell Vale<br>
+            NSW 2517</p>
+        </div>
+        <div class="footer-center">
+            <a class="contact-btn" href="tel:+61242847910">Contact Us: +61 2 4284 7910</a>
+        </div>
+        <div class="footer-right">
+            <p>Pat Duncan Mobile: <strong>0401 953 204</strong> &nbsp;&nbsp; 
+            Shaun Duncan Mobile: <strong>0423 731 006</strong><br>
+            Email: <a href="mailto:pdesolutions1@optusnet.com.au">pdesolutions1@optusnet.com.au</a><br>
+            Email: <a href="mailto:sd.pdesolutions@optusnet.com.au">sd.pdesolutions@optusnet.com.au</a></p>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('cs-navigation');
+        const toggle = document.querySelector('.cs-toggle');
+        const ul = document.querySelector('.cs-ul');
+        const body = document.body;
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('cs-active');
+            ul.setAttribute('aria-expanded', nav.classList.contains('cs-active'));
+            body.classList.toggle('cs-open');
+        });
+
+        // Close nav on link click
+        document.querySelectorAll('.cs-li-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('cs-active');
+                ul.setAttribute('aria-expanded', 'false');
+                body.classList.remove('cs-open');
+            });
+        });
+    </script>
+</body>
+</html>
